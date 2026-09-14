@@ -31,17 +31,15 @@ export default function RootLayout(
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
       </head>
       <body className={`${montserratAlternates.variable} ${albertSans.className}`}>
-        <header className="flex items-center justify-between px-8 py-6 bg-white text-gray-800 shadow-md">
-          <div className="flex items-center gap-2">
+        <header className="flex w-full items-center justify-between bg-white px-4 py-6 text-gray-800 shadow-md sm:px-6 md:px-8">
+          <div>
             <Link href="/">
-              <Image src={PrintForgeLogo} alt="PrintForge Logo" className="hidden md:block h-8" />
-            </Link>
-            <Link href="/">
-              <Image src={PrintForgeLogoMobile} alt="PrintForge Logo" className="md:hidden h-8" />
+              <Image src={PrintForgeLogo} alt="PrintForge Logo" className="hidden h-8 w-auto md:block" />
+              <Image src={PrintForgeLogoMobile} alt="PrintForge Logo" className="h-8 w-auto md:hidden sm:block" />
             </Link>
           </div>
-          <nav>
-            <ul className="flex gap-8">
+          <nav className="ml-auto">
+            <ul className="flex whitespace-nowrap gap-4 sm:gap-8">
               <li><Link href="/3d-models" className="hover:underline hover:underline-offset-10 hover:text-orange-400 ">3D Models</Link></li>
               <li><Link href="/about" className="hover:underline hover:underline-offset-10 hover:text-orange-400 ">About</Link></li>
             </ul>
