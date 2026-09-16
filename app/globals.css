@@ -1,26 +1,5 @@
 @import "tailwindcss";
 
-
-/* Design tokens keep component variants consistent and easy to extend. */
-:root {
-
-    --color-page: #FFFFFF;
-    --color-white: #fff;
-    --color-text: #111827;
-    --color-muted: #4b5563;
-    --color-border: #6b7280;
-    --color-surface: #f9fafb;
-    --color-shadow: rgba(0, 0, 0, 0.1);
-    --radius-sm: 4px;
-    --radius-md: 6px;
-    --radius-lg: 8px;
-    --space-1: 0.25rem;
-    --space-2: 0.5rem;
-    --space-3: 0.75rem;
-    --space-4: 1rem;
-}
-
-/* Base reset and page layout: mobile is the default experience. */
 *,
 *::before,
 *::after {
@@ -52,77 +31,20 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
     gap: 2.5rem;
 }
-
-.hero-content {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
+a:focus-visible {
+    align-items: end;
+    justify-content: space-between;
+    gap: 2rem;
+    padding-bottom: 2.5rem;
+    border-bottom: 1px solid #d9d4ca;
 }
 
-.hero-kicker {
-    color: var(--color-muted);
-    font-size: 0.875rem;
-    font-weight: 600;
-    line-height: 1.4;
+.eyebrow,
+.filter-label {
+    margin: 0 0 0.75rem;
+
 }
+.hero {
 
-.hero-title {
-    max-width: 34rem;
-    margin: 0;
-    font-size: clamp(2rem, 9vw, 4rem);
-    line-height: 1.08;
+    width: min(100%, 72rem);
 }
-
-.hero-description {
-    max-width: 32rem;
-    margin: 0;
-    color: var(--color-muted);
-    font-size: 1rem;
-    line-height: 1.6;
-}
-
-
-.hero-media {
-    width: 100%;
-    max-width: 32rem;
-    margin: 0 auto;
-    overflow: hidden;
-    border-radius: var(--radius-lg);
-}
-
-.hero-media img {
-    display: block;
-    width: 100%;
-    height: auto;
-}
-
-@media (min-width: 48rem) {
-    .home-page {
-        padding: 2rem 2rem 3rem;
-    }
-
-    .hero {
-        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-        gap: clamp(3rem, 8vw, 7rem);
-    }
-
-    .browse-button {
-        width: auto;
-    }
-
-    .hero-media {
-        max-width: none;
-    }
-}
-
-
-
-
-button:focus-visible,
-.menu-item:focus-visible {
-    outline: 3px solid rgba(59, 130, 246, 0.45);
-    outline-offset: 2px;
-}
-
-

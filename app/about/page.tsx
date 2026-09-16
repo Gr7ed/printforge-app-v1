@@ -8,16 +8,16 @@ import { CiFlag1 } from "react-icons/ci";
 
 export default function About() {
   return (
-    <main className={`about-page `}>
+    <main>
         <section className="flex flex-col items-center justify-between gap-8 px-6 py-12 mx-auto md:flex-row w-full max-w-5xl" aria-labelledby="about-title">
             <div className="flex w-full justify-center md:w-1/2">
                 <Image className="h-auto max-w-full" src={AboutImage} alt="A 3D printed model" />
             </div>
             <div className="flex flex-col justify-center text-left gap-8 px-9 py-12 mx-auto md:flex-col max-w-3xl md:w-1/2">
-                <p className={`text-gray-600 uppercase tracking-wide text-sm `}>
+                <p className="text-sm uppercase tracking-wide text-gray-600">
                     About PrintForge
                 </p>
-                <h1 className={`text-3xl font-bold `}>Empowering makers worldwide</h1>
+                <h1 className="text-3xl font-bold">Empowering makers worldwide</h1>
                 <p className="text-md">
                     Founded in 2023, PrintForge has quickly become the go-to platform for 3D printing enthusiasts, makers, and professional designers to share and discover amazing STL files for 3D printing.
                 </p>
@@ -28,20 +28,20 @@ export default function About() {
         </section>
         <section className="grid grid-cols-1 gap-4 px-6 py-8 mx-auto sm:grid-cols-3 md:flex-row w-full max-w-5xl" aria-label="PrintForge community statistics">
             <div className=" p-6 md:border-r-2 md:border-gray-300">
-                <h2 className={`text-xl font-bold py-1 flex flex-row items-center gap-3`}><GoStack size={22} /> 100K+ Models</h2>
+                <h2 className="flex flex-row items-center gap-3 py-1 text-xl font-bold"><GoStack size={22} /> 100K+ Models</h2>
                 <p className="mt-2 text-sm font-semibold tracking-wide text-gray-600">Access our vast library of community-created 3D models, from practical tools to artistic creations.</p>
             </div>
             <div className=" p-6 md:border-r-2 md:border-gray-300">
-                <h2 className={`text-xl font-bold py-1 flex flex-row items-center gap-3 `}><TbWorld size={22} /> Active Community</h2>
+                <h2 className="flex flex-row items-center gap-3 py-1 text-xl font-bold"><TbWorld size={22} /> Active Community</h2>
                 <p className="mt-2 text-sm font-semibold tracking-wide text-gray-600">Join thousands of makers who share tips, provide feedback, and collaborate on projects.</p>
             </div>
             <div className="p-6 ">
-                <h2 className={`text-xl font-bold py-1 flex flex-row items-center gap-3`}><CiFlag1 size={22} /> Free to Use</h2>
+                <h2 className="flex flex-row items-center gap-3 py-1 text-xl font-bold"><CiFlag1 size={22} /> Free to Use</h2>
                 <p className="mt-2 text-sm font-semibold tracking-wide text-gray-600">Most models are free to download, with optional premium features for power users.</p>
             </div>
         </section>
         <section className="flex flex-col items-center justify-center text-left gap-8 px-9 py-12 mx-auto md:flex-col max-w-3xl">
-                <h3 className={`text-3xl font-bold `}>
+                <h3 className="text-3xl font-bold">
                     Our Vision
                 </h3>
                 <p>
