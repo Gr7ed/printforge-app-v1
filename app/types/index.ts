@@ -17,6 +17,11 @@ export type ModelPageProps = {
     id: string
   }>
 };
+export type CategoryPageProps = {
+  params : Promise<{
+    slug: string
+  }>
+};
 
 export type ModelCardProps = {
   model: Model,
@@ -26,4 +31,16 @@ export type ModelCardProps = {
 export type PillProps = {
   children: React.ReactNode,
   className?: string
+};
+
+export type ModelsGridProps = {
+  models: Model[]
+};
+
+export type Category = {
+      displayName: string,
+      slug: string
+}
+export type CategoriesData = {
+  categories: Category[]
 };

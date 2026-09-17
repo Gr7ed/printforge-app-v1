@@ -2,9 +2,10 @@ import { FiArrowUpRight, FiHeart } from 'react-icons/fi';
 import type { ModelCardProps } from '@/app/types';
 import Link from 'next/link';
 import Pill from '@/app/components/Pill';
+import { JSX } from 'react';
 
 
-export default function ModelCard ({ model, index }: ModelCardProps) {
+export default function ModelCard ({ model, index }: ModelCardProps): JSX.Element {
     return (
     <Link href={`/3d-models/${model.id}`} className="h-full no-underline hover:no-underline">
     <article className="flex h-full min-w-0 flex-col overflow-hidden border border-[#ded9d0] bg-[#fffdf9] transition duration-200 hover:-translate-y-1 hover:shadow-[0_1rem_2rem_rgba(37,45,39,0.1)]" id={index === 0 ? 'all-models' : undefined} key={model.id}>
@@ -13,7 +14,7 @@ export default function ModelCard ({ model, index }: ModelCardProps) {
             <FiArrowUpRight size={20} />
         </div>
         <div className="flex flex-1 flex-col p-[1.1rem_1.15rem_1.25rem]">
-            <div className="flex justify-between gap-4 uppercase tracking-[0.08em] text-[#a44f2b]">
+            <div className="flex justify-between gap-4 tracking-[0.08em] text-[#a44f2b]">
                  <span><Pill>{model.category.replaceAll('-', ' ')}</Pill></span>
                  <span className="inline-flex items-center gap-1 text-[0.68rem]  text-[#68726d] normal-case tracking-normal"><FiHeart size={14} /> {model.likes.toLocaleString()}</span>
             </div>
