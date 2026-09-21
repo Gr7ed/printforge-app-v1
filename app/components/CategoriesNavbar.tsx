@@ -1,21 +1,37 @@
-import Link from "next/link"
+"use client"
+
+import NavLink from "./NavLink"
+import { usePathname } from "next/navigation"
 import { getAllCategories } from "@/app/lib/categories"
 import type { Category } from "@/app/types"
 
 export default function CategoriesNavbar() {
 	const categories: Category[] = getAllCategories()
+	const pathname = usePathname()
 
 	return (
-		<nav aria-label="Model categories" className="flex flex-wrap gap-2">
+		<aside className="w-full lg:sticky lg:top-6 lg:self-start">
+		<nav aria-label="Model categories" className="overflow-x-auto rounded-lg bg-white text-left">
+			<ul className="flex  min-w-max gap-3 p-2 lg:min-w-0 lg:flex-col">
+				<NavLink
+				className="hover:underline hover:underline-offset-10 lg:pl-2 lg:hover:no-underline lg:hover:border-l-2 lg:hover:border-orange-400"
+					href="/3d-models"
+					isActive={pathname === "/3d-models"}
+				>
+					All Models
+				</NavLink>
 			{categories.map((category) => (
-				<Link
+				<NavLink
+					className="hover:underline hover:underline-offset-10 lg:pl-2 lg:hover:no-underline lg:hover:border-l-2 lg:hover:border-orange-400"
 					key={category.slug}
 					href={`/3d-models/categories/${category.slug}`}
-					className="rounded-full bg-[#f5f2ed] px-4 py-1 text-sm font-semibold text-[#17231f] transition duration-200 hover:bg-[#e0d9cd]"
+					isActive={pathname === `/3d-models/categories/${category.slug}`}
 				>
 					{category.displayName}
-				</Link>
+				</NavLink>
 			))}
+			</ul>
 		</nav>
+	</aside>
 	)
 }

@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import { Montserrat_Alternates, Albert_Sans } from 'next/font/google';
 import type { RootLayoutProps } from '@/app/types';
 
+
 const montserratAlternates = Montserrat_Alternates({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"], // Specify required weights
   subsets: ['latin'],
@@ -15,8 +16,8 @@ const albertSans = Albert_Sans({
   display: 'swap',
 });
 
-export default function RootLayout( {children} : RootLayoutProps) 
-  {
+export default function RootLayout( {children} : RootLayoutProps) {
+  console.log("RootLayout: ", `${typeof window === "undefined" ? "Server" : "Client"} component`)
   return (
     <html
       lang="en"

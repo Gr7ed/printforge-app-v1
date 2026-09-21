@@ -44,3 +44,7 @@ export type Category = {
 export type CategoriesData = {
   categories: Category[]
 };
+
+export type GetModelsParams = {
+  category?: string
+};

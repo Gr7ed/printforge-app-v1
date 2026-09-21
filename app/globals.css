@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+
+@theme {
+  --orange-accent: #F77D36;
+}
+
 *,
 *::before,
 *::after {
