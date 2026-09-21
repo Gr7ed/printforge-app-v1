@@ -8,9 +8,7 @@ import { usePathname } from "next/navigation";
 import NavLink from "./NavLink";
 
 export default function Navbar() {
-  console.log("Navbar: ", `${typeof window === "undefined" ? "Server" : "Client"} component`)
     const pathname = usePathname();
-
     return (
         <header className="flex w-full items-center justify-between bg-white px-4 py-6 text-gray-800 shadow-md sm:px-6 md:px-8">
           <Link href="/">

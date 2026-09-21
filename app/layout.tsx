@@ -17,7 +17,6 @@ const albertSans = Albert_Sans({
 });
 
 export default function RootLayout( {children} : RootLayoutProps) {
-  console.log("RootLayout: ", `${typeof window === "undefined" ? "Server" : "Client"} component`)
   return (
     <html
       lang="en"
