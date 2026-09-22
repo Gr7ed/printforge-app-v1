@@ -1,8 +1,21 @@
 @import "tailwindcss";
 
 @theme {
-  --orange-accent: #F77D36;
---color-orange-accent: var(--orange-accent);
+    --orange-accent: #c85b2f;
+    --color-orange-accent: var(--orange-accent);
+}
+
+:root {
+        --surface: #f7f5f0;
+        --surface-muted: #f1eee7;
+        --surface-raised: #fffdf9;
+        --ink: #17231f;
+        --muted: #68726d;
+        --border: #ded9d0;
+        --border-strong: #bdb6aa;
+        --accent: #c85b2f;
+        --accent-dark: #a44f2b;
+        --accent-soft: rgba(200, 91, 47, 0.16);
 }
 
 *,
@@ -16,8 +29,8 @@ body {
     min-height: 100vh;
     margin: 0;
     padding: 0;
-    background-color: #f7f5f0;
-    color: #17231f;
+    background-color: var(--surface);
+    color: var(--ink);
     font-family: var(--font-albert-sans), system-ui, sans-serif;
 }
 
@@ -26,4 +39,17 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-montserrat-alternates, system-ui, sans-serif);
+}
+
+::selection {
+    background: var(--accent);
+    color: white;
+}
+
+.eyebrow {
+    color: var(--accent);
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
 }

@@ -20,13 +20,16 @@ export type ModelPageProps = {
 export type CategoryPageProps = {
   params : Promise<{
     slug: string
-  }>
+  }>;
+  searchParams: Promise<{
+    q?: string
+  }>;
 };
 
 export type ModelsPageProps = {
-  searchParams: {
+  searchParams: Promise<{
     q?: string
-  }
+  }>
 };
 
 export type ModelsLayoutProps = Readonly<{
@@ -35,7 +38,12 @@ export type ModelsLayoutProps = Readonly<{
 
 export type ModelCardProps = {
   model: Model,
-  index: number
+  index?: number
+};
+
+export type ModelVisualProps = {
+  model: Model;
+  className?: string;
 };
 
 export type PillProps = {
@@ -66,6 +74,7 @@ export type GetModelsParams = {
 
 export type ModelSearchProps = {
   defaultValue?: string;
+  action?: string;
 };
 
 export type NavbarItem = {
