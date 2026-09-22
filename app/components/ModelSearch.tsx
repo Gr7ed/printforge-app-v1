@@ -10,11 +10,11 @@ export default function ModelSearch({ defaultValue = "", action = "/3d-models" }
   const query = searchParams.get("q") ?? defaultValue;
 
   return (
-    <Form action={action} className="flex w-full max-w-xl" role="search">
+    <Form action={action} className="flex w-full max-w-xl py-2" role="search">
       <label className="sr-only" htmlFor="model-search">
         Search models
       </label>
-      <div className="flex min-w-0 flex-1 items-center rounded-l-lg border border-r-0 border-(--border-strong) bg-white shadow-sm transition focus-within:border-(--accent) focus-within:ring-4 focus-within:ring-(--accent-soft)">
+      <div className="flex min-w-0 flex-1 items-center rounded-l-lg  bg-white shadow-sm transition focus-within:ring-4 focus-within:ring-(--accent-soft)">
         <FiSearch className="ml-4 shrink-0 text-(--muted)" aria-hidden="true" />
         <input
           id="model-search"

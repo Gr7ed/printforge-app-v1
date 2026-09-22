@@ -6,7 +6,7 @@ import HeroImage from '@/public/hero-image.png'; // Import your static image
 export default function Home() {
   return (
     <main className="w-full px-4 py-6 sm:px-6 sm:py-8 lg:px-8">
-      <section className="mx-auto grid min-h-[calc(100vh-7rem)] w-full items-center gap-10 md:grid-cols-2 md:gap-16" aria-labelledby="hero-title">
+      <section className="mx-auto grid min-h-[calc(100vh-7rem)] w-full max-w-6xl items-center gap-10 md:grid-cols-2 md:gap-16 lg:min-h-[calc(100dvh-9rem)]" aria-labelledby="hero-title">
         <div className="flex flex-col items-start gap-4">
           <span className="text-sm font-semibold leading-6 text-gray-600">Your go-to platform for 3D printing files</span>
           <h1 id="hero-title" className="m-0 max-w-xl text-[clamp(2rem,9vw,4rem)] leading-tight">Discover what&apos;s possible with 3D printing</h1>
