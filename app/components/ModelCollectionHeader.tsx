@@ -15,8 +15,8 @@ export default function ModelCollectionHeader({
   searchAction = "/3d-models",
 }: ModelCollectionHeaderProps) {
   return (
-    <header className="sticky top-15 z-20 -mx-4 border-b border-(--border) bg-[var(--surface-muted)/.96] px-4 py-2 backdrop-blur sm:-mx-6 sm:px-6 lg:top-18 lg:mx-0 lg:flex lg:items-end lg:justify-between lg:gap-8 lg:border-b-0 lg:bg-[var(--surface)/.96] lg:px-0 lg:py-2 lg:backdrop-blur">
-      <div className="min-w-0">
+    <header className="sticky top-15 z-20 -mx-4 bg-[var(--surface-muted)/.96] px-4 py-2 backdrop-blur sm:-mx-6 sm:px-6 lg:top-18 lg:mx-0 lg:flex lg:items-end lg:justify-between lg:gap-8 lg:bg-[var(--surface)/.96] lg:px-0 lg:py-2 lg:backdrop-blur">
+      <div className="min-w-0  lg:max-w-2xl">
         {eyebrow ? <p className="eyebrow">{eyebrow}</p> : null}
         <h1 className="mt-1 truncate text-2xl font-semibold text-(--ink) sm:text-3xl">{title}</h1>
         <p className="mt-1 text-sm text-(--muted)" aria-live="polite">
