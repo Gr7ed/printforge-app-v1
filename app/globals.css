@@ -3,19 +3,16 @@
 @theme {
     --orange-accent: #c85b2f;
     --color-orange-accent: var(--orange-accent);
-}
-
-:root {
-        --surface: #f7f5f0;
-        --surface-muted: #f1eee7;
-        --surface-raised: #fffdf9;
-        --ink: #17231f;
-        --muted: #68726d;
-        --border: #ded9d0;
-        --border-strong: #bdb6aa;
-        --accent: #c85b2f;
-        --accent-dark: #a44f2b;
-        --accent-soft: rgba(200, 91, 47, 0.16);
+    --surface: #f7f5f0;
+    --surface-muted: #f1eee7;
+    --surface-raised: #fffdf9;
+    --ink: #17231f;
+    --muted: #68726d;
+    --border: #ded9d0;
+    --border-strong: #bdb6aa;
+    --accent: #c85b2f;
+    --accent-dark: #a44f2b;
+    --accent-soft: rgba(200, 91, 47, 0.16);
 }
 
 *,
