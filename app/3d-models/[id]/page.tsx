@@ -8,12 +8,12 @@ export default async function ModelPage({ params }: ModelPageProps) {
     const { id } = await params;
     const model = await getModelById(id);
     return (
-        <main className="mx-auto w-full max-w-360 px-4 py-8 sm:px-8 sm:py-12 lg:px-12 lg:py-16">
-            <Link href="/3d-models" className="mb-8 inline-flex items-center gap-2 text-sm font-semibold text-[#68726d] transition-colors hover:text-[#a44f2b] focus-visible:text-[#a44f2b]">
+        <main className="mx-auto w-full max-w-[120rem] px-4 py-6 sm:px-6 sm:py-10 lg:px-8 lg:py-12">
+            <Link href="/3d-models" className="mb-6 inline-flex items-center gap-2 text-sm font-semibold text-[#68726d] transition-colors hover:text-[#a44f2b] focus-visible:text-[#a44f2b] sm:mb-8">
                 <FiArrowLeft size={16} aria-hidden="true" />
                 Back to overview
             </Link>
-            <article className="flex min-w-0 flex-col overflow-hidden bg-[#fffdf9] md:flex-row" key={model.id}>
+            <article className="mx-auto flex min-w-0 max-w-6xl flex-col overflow-hidden border border-[#ded9d0] bg-[#fffdf9] shadow-sm md:flex-row" key={model.id}>
                 <div className={`flex aspect-[1.18] w-full shrink-0 items-start justify-between p-4 text-xs font-bold tracking-widest text-white/85 md:aspect-auto md:min-h-96 md:w-1/2 ${['bg-[linear-gradient(135deg,#d77c52,#6b3c35)]', 'bg-[linear-gradient(135deg,#8d9b85,#354d48)]', 'bg-[linear-gradient(135deg,#e0b36d,#875340)]', 'bg-[linear-gradient(135deg,#7896a0,#304d58)]', 'bg-[linear-gradient(135deg,#bc8a9f,#593b57)]'][model.id % 5]}`} aria-hidden="true">
                     <span>{String(model.id).padStart(2, '0')}</span>
                     <FiArrowUpRight size={20} />

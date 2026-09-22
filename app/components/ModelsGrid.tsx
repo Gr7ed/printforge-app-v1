@@ -1,23 +1,22 @@
 import ModelCard from "./ModelCard";
 import type { ModelsGridProps } from "@/app/types";
-import { JSX } from "react";
 
-
-
-export default async function ModelsGrid({ models }: ModelsGridProps): Promise<JSX.Element> {
+export default function ModelsGrid({ models }: ModelsGridProps) {
 
     return (
-        <section className="mx-auto w-full max-w-360 px-0 py-6 sm:py-10 lg:py-12">
-            <h1 className="mb-6 text-2xl font-semibold text-gray-900 sm:mb-8 sm:text-3xl lg:mb-5 lg:text-4xl">
-                3D Models
-            </h1>
-            <div className="pt-8 sm:pt-10">
+        <section className="w-full pt-5 sm:pt-6 lg:pt-8">
+            {models.length > 0 ? (
                 <div className="grid auto-rows-fr grid-cols-1 gap-5 sm:grid-cols-2 xl:grid-cols-3">
                     {models.map((model, index) => (
                         <ModelCard key={model.id} model={model} index={index} />
                     ))}
                 </div>
-            </div>
+            ) : (
+                <div className="border border-dashed border-[#cfc8bc] bg-white px-6 py-12 text-center">
+                    <h2 className="text-xl font-semibold text-[#17231f]">No models found</h2>
+                    <p className="mt-2 text-sm text-[#68726d]">Try a different search or browse another category.</p>
+                </div>
+            )}
         </section>
     );
 }

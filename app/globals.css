@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
-
 @theme {
   --orange-accent: #F77D36;
+--color-orange-accent: var(--orange-accent);
 }
 
 *,
@@ -16,40 +16,14 @@ body {
     min-height: 100vh;
     margin: 0;
     padding: 0;
-    background-color: var(--color-page);
-    color: var(--color-text);
+    background-color: #f7f5f0;
+    color: #17231f;
+    font-family: var(--font-albert-sans), system-ui, sans-serif;
 }
+
+
+
+
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-montserrat-alternates, system-ui, sans-serif);
-}
-
-.home-page {
-    width: 100%;
-    padding: 1.5rem 1rem 2.5rem;
-}
-
-.hero {
-    width: min(100%, 72rem);
-    min-height: calc(100vh - 4rem);
-    margin: 0 auto;
-    display: grid;
-    align-items: center;
-    gap: 2.5rem;
-}
-a:focus-visible {
-    align-items: end;
-    justify-content: space-between;
-    gap: 2rem;
-    padding-bottom: 2.5rem;
-    border-bottom: 1px solid #d9d4ca;
-}
-
-.eyebrow,
-.filter-label {
-    margin: 0 0 0.75rem;
-
-}
-.hero {
-
-    width: min(100%, 72rem);
 }

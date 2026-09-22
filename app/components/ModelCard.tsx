@@ -1,14 +1,12 @@
 import { FiArrowUpRight, FiHeart } from 'react-icons/fi';
 import type { ModelCardProps } from '@/app/types';
 import Link from 'next/link';
-import Pill from '@/app/components/Pill';
-import { JSX } from 'react';
+import Pill from './Pill';
 
-
-export default function ModelCard ({ model, index }: ModelCardProps): JSX.Element {
+export default function ModelCard({ model, index = 0 }: ModelCardProps) {
     return (
     <Link href={`/3d-models/${model.id}`} className="h-full no-underline hover:no-underline">
-    <article className="flex h-full min-w-0 flex-col overflow-hidden border border-[#ded9d0] bg-[#fffdf9] transition duration-200 hover:-translate-y-1 hover:shadow-[0_1rem_2rem_rgba(37,45,39,0.1)]" id={index === 0 ? 'all-models' : undefined} key={model.id}>
+    <article className="flex h-full min-w-0 flex-col overflow-hidden border border-[#ded9d0] bg-[#fffdf9] transition duration-200 hover:-translate-y-1 hover:shadow-[0_1rem_2rem_rgba(37,45,39,0.1)]" id={index === 0 ? 'all-models' : undefined}>
         <div className={`flex aspect-[1.18] items-start justify-between p-4 text-xs font-bold tracking-widest text-white/85 ${['bg-[linear-gradient(135deg,#d77c52,#6b3c35)]', 'bg-[linear-gradient(135deg,#8d9b85,#354d48)]', 'bg-[linear-gradient(135deg,#e0b36d,#875340)]', 'bg-[linear-gradient(135deg,#7896a0,#304d58)]', 'bg-[linear-gradient(135deg,#bc8a9f,#593b57)]'][index % 5]}`} aria-hidden="true">
             <span>{String(model.id).padStart(2, '0')}</span>
             <FiArrowUpRight size={20} />

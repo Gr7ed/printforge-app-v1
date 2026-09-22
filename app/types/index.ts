@@ -23,6 +23,16 @@ export type CategoryPageProps = {
   }>
 };
 
+export type ModelsPageProps = {
+  searchParams: {
+    q?: string
+  }
+};
+
+export type ModelsLayoutProps = Readonly<{
+  children: React.ReactNode;
+}>;
+
 export type ModelCardProps = {
   model: Model,
   index: number
@@ -37,14 +47,39 @@ export type ModelsGridProps = {
   models: Model[]
 };
 
+export type CategoriesNavbarProps = {
+  categories: Category[]
+};
+
 export type Category = {
-      displayName: string,
-      slug: string
-}
+  displayName: string,
+  slug: string
+};
+
 export type CategoriesData = {
   categories: Category[]
 };
 
 export type GetModelsParams = {
   category?: string
+};
+
+export type ModelSearchProps = {
+  defaultValue?: string;
+};
+
+export type NavbarItem = {
+  href: string;
+  label: string;
+};
+
+export type NavbarProps = {
+  items?: NavbarItem[];
+};
+
+export type NavLinkProps = {
+  href: string;
+  children: React.ReactNode;
+  isActive?: boolean;
+  className?: string;
 };

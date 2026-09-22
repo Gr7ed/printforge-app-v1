@@ -8,30 +8,30 @@ import { CiFlag1 } from "react-icons/ci";
 
 export default function About() {
   return (
-    <main>
-        <section className="flex flex-col items-center justify-between gap-8 px-6 py-12 mx-auto md:flex-row w-full max-w-5xl" aria-labelledby="about-title">
-            <div className="flex w-full justify-center md:w-1/2">
-                <Image className="h-auto max-w-full" src={AboutImage} alt="A 3D printed model" />
+    <main className="w-full">
+        <section className="mx-auto grid w-full max-w-6xl items-center gap-8 px-4 py-10 sm:px-6 sm:py-14 md:grid-cols-2 md:gap-12 lg:px-8" aria-labelledby="about-title">
+            <div className="flex justify-center">
+                <Image className="h-auto w-full max-w-lg" src={AboutImage} alt="A 3D printed model" />
             </div>
-            <div className="flex flex-col justify-center text-left gap-8 px-9 py-12 mx-auto md:flex-col max-w-3xl md:w-1/2">
+            <div className="flex max-w-2xl flex-col justify-center gap-6 text-left">
                 <p className="text-sm uppercase tracking-wide text-gray-600">
                     About PrintForge
                 </p>
-                <h1 className="text-3xl font-bold">Empowering makers worldwide</h1>
-                <p className="text-md">
+                <h1 id="about-title" className="text-3xl font-bold sm:text-4xl">Empowering makers worldwide</h1>
+                <p className="text-base leading-relaxed text-gray-700">
                     Founded in 2023, PrintForge has quickly become the go-to platform for 3D printing enthusiasts, makers, and professional designers to share and discover amazing STL files for 3D printing.
                 </p>
-                <p className="text-md">
+                <p className="text-base leading-relaxed text-gray-700">
                     Our mission is to foster a vibrant community where creativity meets technology, enabling anyone to bring their ideas to life through 3D printing.
                 </p>
             </div>
         </section>
-        <section className="grid grid-cols-1 gap-4 px-6 py-8 mx-auto sm:grid-cols-3 md:flex-row w-full max-w-5xl" aria-label="PrintForge community statistics">
-            <div className=" p-6 md:border-r-2 md:border-gray-300">
+        <section className="mx-auto grid w-full max-w-6xl grid-cols-1 gap-4 px-4 py-8 sm:px-6 md:grid-cols-3 lg:px-8" aria-label="PrintForge community statistics">
+            <div className="p-6 md:border-r-2 md:border-gray-300">
                 <h2 className="flex flex-row items-center gap-3 py-1 text-xl font-bold"><GoStack size={22} /> 100K+ Models</h2>
                 <p className="mt-2 text-sm font-semibold tracking-wide text-gray-600">Access our vast library of community-created 3D models, from practical tools to artistic creations.</p>
             </div>
-            <div className=" p-6 md:border-r-2 md:border-gray-300">
+            <div className="p-6 md:border-r-2 md:border-gray-300">
                 <h2 className="flex flex-row items-center gap-3 py-1 text-xl font-bold"><TbWorld size={22} /> Active Community</h2>
                 <p className="mt-2 text-sm font-semibold tracking-wide text-gray-600">Join thousands of makers who share tips, provide feedback, and collaborate on projects.</p>
             </div>
@@ -40,7 +40,7 @@ export default function About() {
                 <p className="mt-2 text-sm font-semibold tracking-wide text-gray-600">Most models are free to download, with optional premium features for power users.</p>
             </div>
         </section>
-        <section className="flex flex-col items-center justify-center text-left gap-8 px-9 py-12 mx-auto md:flex-col max-w-3xl">
+        <section className="mx-auto flex w-full max-w-3xl flex-col items-start justify-center gap-6 px-4 py-12 text-left sm:px-6 lg:px-8">
                 <h3 className="text-3xl font-bold">
                     Our Vision
                 </h3>
