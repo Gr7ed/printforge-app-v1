@@ -14,7 +14,7 @@ export default function CategoriesNavbar({ categories = [] }: CategoriesNavbarPr
 	}, [pathname])
 
 	return (
-		<aside className="sticky top-0 z-30 w-full border-none bg-[#f7f5f0]/95 text-[#17231f] self-start lg:w-60 lg:top-24">
+		<aside className="sticky top-0 z-30 w-full border-none bg-[#f7f5f0]/95 text-[#17231f] self-start lg:w-60 lg:top-24 md:sticky md:top-18 ">
 		<nav aria-label="Model categories" className="overflow-x-auto  text-left ">
 			<ul className="flex min-w-max gap-1 p-2 lg:min-w-0 lg:flex-col">
 				<NavLink
